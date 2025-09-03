@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Entrando no Roblox...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const placeId = params.get("placeId");
+    const gameInstanceId = params.get("gameInstanceId");
+
+    if (placeId && gameInstanceId) {
+      const robloxURL = `roblox://placeId=${placeId}&gameInstanceId=${gameInstanceId}`;
+      window.location.href = robloxURL;
+    } else {
+      document.write("Faltam parâmetros: placeId ou gameInstanceId.");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
